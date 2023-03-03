@@ -9,6 +9,7 @@ import RequestModal from './components/RequestModal/RequestModal'
 import UserRequest from './components/UserRequest/UserRequest'
 import AllRequest from './components/AllRequest/AllRequest'
 import UploadNotice from './components/UploadNotice/UploadNotice'
+import Fixture from './components/Fixture/Fixture'
 import UploadProduct from './components/UploadProduct/UploadProduct'
 import Register from './components/Register/Register'
 import Event from './components/Event/Event'
@@ -30,6 +31,7 @@ import { selectUser } from './features/userSlice/userSlice'
 import Achievment from './components/Achievment/Achievment'
 import Notice from './components/Homepage/Notice'
 import Teacher from './components/Navbar/Teacher/Teacher'
+import SportsFixture from './components/Event/SportsFixture/SportsFixture'
 
 function App () {
   const user = useSelector(selectUser)
@@ -105,8 +107,14 @@ function App () {
             <Faq />
           </Route>
 
-          <Route path='/notice'>
+          <Route path='/uploadnotice'>
             <UploadNotice />
+          </Route>
+          <Route path='/fixture'>
+            <Fixture/>
+          </Route>
+          <Route path='/sFixture'>
+            <SportsFixture/>
           </Route>
           <Route path='/uploadEvent'>
             <UploadEvent />

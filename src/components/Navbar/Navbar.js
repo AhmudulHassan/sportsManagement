@@ -71,6 +71,11 @@ const Navbar = () => {
               Teachers and Officers Profile
               </a>
             </li>
+            <li class='nav-item px-3'>
+              <a class='nav-link' href='/sFixture'>
+              Sports Fixture
+              </a>
+            </li>
           </ul>
           {user === null && (
             <div class=' my-2 my-lg-0'>

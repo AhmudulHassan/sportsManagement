@@ -111,14 +111,17 @@ const AdminDeshboard = () => {
                         All Event
                       </a>
 
-                      <a class='nav-item nav-link' href='/notice'>
-                        Notice
+                      <a class='nav-item nav-link' href='/uploadnotice'>
+                       Upload Notice
                       </a>
                       <a class='nav-item nav-link' href='/product'>
                         Items
                       </a>
                       <a class='nav-item nav-link' href='/uploadEvent'>
                         Events
+                      </a>
+                      <a class='nav-item nav-link' href='/fixture'>
+                        Fixture
                       </a>
                     </>
                   )}

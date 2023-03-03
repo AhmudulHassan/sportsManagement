@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React from 'react'
+import { NavDropdown } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { logout, selectUser } from '../../features/userSlice/userSlice'
@@ -40,42 +41,45 @@ const Navbar = () => {
         </button>
 
         <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-          <ul class='navbar-nav m-auto d-flex '>
-            <li class='nav-item px-3 active'>
+          <ul class='navbar-nav m-auto d-flex fw-small'>
+            <li class='nav-item px-2 active'>
               <a class='nav-link' href='/home'>
                 Home <span class='sr-only'>(current)</span>
               </a>
             </li>
-            <li class='nav-item px-3'>
+            <li class='nav-item px-2'>
               <a class='nav-link' href='/singleEvent'>
                 Events
               </a>
             </li>
-            <li class='nav-item px-3'>
+            <li class='nav-item px-2'>
               <a class='nav-link' href='/sportsItem'>
               Sports Item
               </a>
             </li>
-            <li class='nav-item px-3'>
+            <li class='nav-item px-2'>
               <a class='nav-link' href='/rules'>
               Rules and Regulations
               </a>
             </li>
-            <li class='nav-item px-3'>
+            <li class='nav-item px-2'>
               <a class='nav-link' href='/achievment'>
               Acheivement
               </a>
             </li>
-            <li class='nav-item px-3'>
+            <li class='nav-item px-2'>
               <a class='nav-link' href='/teacher'>
               Teachers and Officers Profile
               </a>
             </li>
-            <li class='nav-item px-3'>
-              <a class='nav-link' href='/sFixture'>
-              Sports Fixture
-              </a>
-            </li>
+              <NavDropdown title="Match Fixture" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/sFixture">Football</NavDropdown.Item>
+              <NavDropdown.Item href="/volleyballf">
+                Volleyball
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/badmintonF">Badminton</NavDropdown.Item>
+              <NavDropdown.Item href="/tabletennisF">Tabble Tennis</NavDropdown.Item>
+            </NavDropdown>
           </ul>
           {user === null && (
             <div class=' my-2 my-lg-0'>

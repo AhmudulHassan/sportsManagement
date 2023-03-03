@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function IndividualIntervalsExample() {
   return (
-    <Carousel>
+    <Carousel className='my-5'>
       <Carousel.Item interval={3500}>
         <img
           className="d-block w-75 m-auto"

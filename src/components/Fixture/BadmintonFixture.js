@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { selectUser } from '../../features/userSlice/userSlice'
 import Navbar from '../Navbar/Navbar'
-const Fixture = () => {
+const BadmintonFixture = () => {
   const history = useHistory()
   const [loading, setLoading] = useState(false)
   const [user, setUser] = useState({
@@ -42,7 +42,11 @@ const Fixture = () => {
   }
   return (
     <div>
+       <div className='mb-5'>
       <Navbar />
+
+      </div>
+      <h3 className='text-center mx-5'>Add Badminton Fixture</h3>
       <div className='container'>
         <div style={{ marginLeft: '200px' }}>
           <div className='row'>
@@ -137,4 +141,4 @@ const Fixture = () => {
   )
 }
 
-export default Fixture
+export default BadmintonFixture

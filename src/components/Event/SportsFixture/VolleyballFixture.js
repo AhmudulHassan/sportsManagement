@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import { Table } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import Navbar from '../../Navbar/Navbar'
-const SportsFixture = () => {
+const VolleyballFixture = () => {
   let history = useHistory()
   const [appointmentInfo, setAppointmentInfo] = useState([])
 
@@ -25,7 +25,7 @@ console.log(data)
       <Navbar />
       <div className='mt-5 text-center mx-auto w-50'>
       </div>
-      <h1 className='text-center my-3'>Football Fixture:</h1>
+      <h1 className='text-center my-3'>Volleyball Fixture:</h1>
       <Table striped bordered hover className='w-75 mt-5 mx-auto text-center'>
       <thead>
         <tr>
@@ -38,16 +38,18 @@ console.log(data)
       {appointmentInfo.map((fixture, index) => {
           return (
             
-        <tr className=''>
-          <td>
+        <tr>
+          <td  className='bg-primary text-white'>
             <p>{fixture.date}</p>
-          <h5>{fixture.time}</h5>
+          <h6>{fixture.time}</h6>
           </td>
-          <td>
+          <td  className='bg-danger text-light'>
             <h5>{fixture.match}</h5>
-          <h6>{fixture.result}</h6>
+          <h4>{fixture.result}</h4>
           </td>
-          <td><h3>{fixture.win}</h3></td>
+          <td  className='bg-warning text-dark'>
+            <h3>{fixture.win}</h3>
+            </td>
         </tr>
           )
         })}
@@ -57,4 +59,4 @@ console.log(data)
   )
 }
 
-export default SportsFixture
+export default VolleyballFixture

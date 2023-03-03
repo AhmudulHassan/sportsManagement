@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import { Table } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import Navbar from '../../Navbar/Navbar'
-const SportsFixture = () => {
+const Tabble_Tennis = () => {
   let history = useHistory()
   const [appointmentInfo, setAppointmentInfo] = useState([])
 
@@ -57,4 +57,4 @@ console.log(data)
   )
 }
 
-export default SportsFixture
+export default Tabble_Tennis

@@ -14,6 +14,7 @@ import Participant from '../Participant/Participant'
 import UploadNotice from '../UploadNotice/UploadNotice'
 import AllEvent from '../AllEvent/AllEvent'
 import AllProduct from '../AllProduct/AllProduct'
+import { NavDropdown } from 'react-bootstrap'
 const AdminDeshboard = () => {
   const user = useSelector(selectUser)
   console.log(user)
@@ -22,7 +23,7 @@ const AdminDeshboard = () => {
     <div>
 
       <Navbar />
-      <div class=''>
+      <div class='w-100'>
         <div class='container pill2'>
           <div class='row'>
             <div class='col-md-12'>
@@ -112,7 +113,7 @@ const AdminDeshboard = () => {
                       </a>
 
                       <a class='nav-item nav-link' href='/uploadnotice'>
-                       Upload Notice
+                       Add Notice
                       </a>
                       <a class='nav-item nav-link' href='/product'>
                         Items
@@ -120,9 +121,19 @@ const AdminDeshboard = () => {
                       <a class='nav-item nav-link' href='/uploadEvent'>
                         Events
                       </a>
-                      <a class='nav-item nav-link' href='/fixture'>
+                      {/* <a class='nav-item nav-link' href='/fixture'>
                         Fixture
-                      </a>
+                      </a> */}
+                      {/* <li class='nav-item px-2'> */}
+              <NavDropdown title="Fixture" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/footballfixture">Football</NavDropdown.Item>
+              <NavDropdown.Item href="/volleyballfixture">
+                Volleyball
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/tabbletennisfixture">Badminton</NavDropdown.Item>
+              <NavDropdown.Item href="/badmintonfixture">Tabble Tennis</NavDropdown.Item>
+            </NavDropdown>
+            {/* </li> */}
                     </>
                   )}
                   {user !== null && user.user && user.user.role === 'user' && (

@@ -9,7 +9,7 @@ import RequestModal from './components/RequestModal/RequestModal'
 import UserRequest from './components/UserRequest/UserRequest'
 import AllRequest from './components/AllRequest/AllRequest'
 import UploadNotice from './components/UploadNotice/UploadNotice'
-import Fixture from './components/Fixture/Fixture'
+import Fixture from './components/Fixture/FootballFixture'
 import UploadProduct from './components/UploadProduct/UploadProduct'
 import Register from './components/Register/Register'
 import Event from './components/Event/Event'
@@ -32,6 +32,13 @@ import Achievment from './components/Achievment/Achievment'
 import Notice from './components/Homepage/Notice'
 import Teacher from './components/Navbar/Teacher/Teacher'
 import SportsFixture from './components/Event/SportsFixture/SportsFixture'
+import BadmintonF from './components/Event/SportsFixture/BadmintonF'
+import BadmintonFixture from './components/Fixture/BadmintonFixture'
+import VolleyballFixture from './components/Event/SportsFixture/VolleyballFixture'
+import VolleyballFixtureadd from './components/Fixture/VolleyballFixtureadd'
+import Tabble_Tennis from './components/Event/SportsFixture/Table_Tennis'
+import FootballFixture from './components/Fixture/FootballFixture'
+import TabbletenniseFixture from './components/Fixture/TabbletenniseFixture'
 
 function App () {
   const user = useSelector(selectUser)
@@ -110,11 +117,29 @@ function App () {
           <Route path='/uploadnotice'>
             <UploadNotice />
           </Route>
-          <Route path='/fixture'>
-            <Fixture/>
+          <Route path='/footballfixture'>
+            <FootballFixture/>
+          </Route>
+          <Route path='/volleyballfixture'>
+            <VolleyballFixtureadd/>
+          </Route>
+          <Route path='/tabbletennisfixture'>
+            <BadmintonFixture/>
+          </Route>
+          <Route path='/badmintonfixture'>
+            <TabbletenniseFixture/>
           </Route>
           <Route path='/sFixture'>
             <SportsFixture/>
+          </Route>
+          <Route path='/badmintonF'>
+            <BadmintonF/>
+          </Route>
+          <Route path='/volleyballF'>
+            <VolleyballFixture/>
+          </Route>
+          <Route path='/tabletennisF'>
+            <Tabble_Tennis/>
           </Route>
           <Route path='/uploadEvent'>
             <UploadEvent />
